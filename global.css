@@ -64,7 +64,7 @@
   .text-h1 {
     font-size: 32px;
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 600;
     font-family: "Poppins-Bold";
   }
 
@@ -107,6 +107,12 @@
   .text-body-sm {
     font-size: 13px;
     line-height: 1.6;
+    font-weight: 400;
+    font-family: "Poppins-Regular";
+  }
+  .text-body-xs {
+    font-size: 10px;
+    line-height: 1.2;
     font-weight: 400;
     font-family: "Poppins-Regular";
   }
@@ -170,7 +176,11 @@
   }
 
   .btn-primary {
-    background-color: #6c4ef5;
+    display: flex;
+    align-items: center;
+    margin-top: 40px; /* mt-10 (2.5rem) */
+    border-radius: 32px;
+    background-color: #0a192f;
     color: #ffffff;
     box-shadow:
       0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -189,7 +199,11 @@
   }
 
   .btn-secondary {
-    background-color: #f6f7fb;
+    display: flex;
+    align-items: center;
+    margin-top: 40px; /* mt-10 (2.5rem) */
+    border-radius: 32px;
+    background-color: #ccff00;
     border: 1px solid #e5e7eb;
     color: #0d1328;
     border-radius: 8px;
@@ -202,6 +216,10 @@
   }
 
   .btn-success {
+    display: flex;
+    align-items: center;
+    margin-top: 40px; /* mt-10 (2.5rem) */
+    border-radius: 32px;
     background-color: #21c168;
     color: #ffffff;
     border-radius: 8px;
@@ -214,6 +232,10 @@
   }
 
   .btn-warning {
+    display: flex;
+    align-items: center;
+    margin-top: 40px; /* mt-10 (2.5rem) */
+    border-radius: 32px;
     background-color: #ffc800;
     color: #0d1328;
     border-radius: 8px;
@@ -226,6 +248,10 @@
   }
 
   .btn-error {
+    display: flex;
+    align-items: center;
+    margin-top: 40px; /* mt-10 (2.5rem) */
+    border-radius: 32px;
     background-color: #ff4c4f;
     color: #ffffff;
     border-radius: 8px;
@@ -239,6 +265,10 @@
 
   /* Badge Utilities */
   .badge-base {
+    display: flex;
+    align-items: center;
+    margin-top: 40px; /* mt-10 (2.5rem) */
+    border-radius: 32px;
     display: inline-flex;
     align-items: center;
     border-radius: 9999px;
