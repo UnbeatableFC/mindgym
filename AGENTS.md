@@ -189,6 +189,22 @@ Use StyleSheet or inline styles for:
 - Shadows (different per platform)
 Everywhere else, use NativeWind.
 
+| Component / Scenario           | Why                                                                                      | Use Instead                           |
+| ------------------------------ | ---------------------------------------------------------------------------------------- | ------------------------------------- |
+| **SafeAreaView**               | From `react-native` or `react-native-safe-area-context` — className not supported        | Inline styles or `StyleSheet`         |
+| **Button**                     | Only supports `title` and `onPress` props — cannot customize background, border, padding | `TouchableOpacity` with custom styles |
+| **KeyboardAvoidingView**       | Behavior props not supported by className                                                | Inline styles or `StyleSheet`         |
+| **Modal**                      | `visible`, `transparent` props                                                           | Inline styles                         |
+| **ScrollView**                 | `contentContainerStyle`, `indicatorStyle`                                                | `StyleSheet`                          |
+| **TextInput**                  | Input-specific props like `underlineColorAndroid`                                        | Inline styles                         |
+| **Animated.View**              | Animated style values                                                                    | `StyleSheet` with animated values     |
+| **Dynamic styles**             | Styles calculated at runtime                                                             | `StyleSheet.create()` or inline       |
+| **Platform-specific**          | iOS-only or Android-only props                                                           | Conditional inline styles             |
+| **Pressable/TouchableOpacity** | `style` prop for pressed states                                                          | `StyleSheet`                          |
+| **Shadow (iOS/Android)**       | Different shadow syntax per platform                                                     | `StyleSheet` with platform checks     |
+| **Transform arrays**           | Complex transform combinations                                                           | `StyleSheet`                          |
+| **Z-index**                    | Sometimes needs explicit StyleSheet                                                      | `StyleSheet`                          |
+
 ---
 ## Image Rule
 Use centralized image imports.

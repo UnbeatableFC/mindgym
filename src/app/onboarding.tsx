@@ -1,6 +1,6 @@
-import { Image, Pressable, Text, View } from "react-native";
-import { useRouter } from "expo-router";
 import { images } from "@/constants/images";
+import { useRouter } from "expo-router";
+import { Image, Pressable, Text, View } from "react-native";
 
 export default function Onboarding() {
   const router = useRouter();
@@ -70,7 +70,7 @@ export default function Onboarding() {
       </View>
 
       <Pressable
-        onPress={() => router.push("/")}
+        onPress={() => router.push("/sign-up")}
         className="btn-primary"
       >
         <Text className="text-body-lg font-semibold text-white/80">
