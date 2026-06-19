@@ -39,7 +39,7 @@ export default function Splash() {
           </View>
 
           <Pressable
-            onPress={() => router.push("/onboarding")}
+            onPress={() => router.push("/(auth)/sign-in")}
             // className="mt-10 rounded-[32px] bg-[#CCFF00] px-6 py-4 items-center"
             className="btn-primary"
           >

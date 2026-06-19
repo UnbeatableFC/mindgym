@@ -1,11 +1,6 @@
-import { images } from "@/constants/images";
 import { useRouter } from "expo-router";
 import {
-  Image,
-  Pressable,
   ScrollView,
-  Text,
-  View,
 } from "react-native";
 import Splash from "./splash";
 
@@ -22,3 +17,5 @@ export default function Index() {
     </ScrollView>
   );
 }
+
+
