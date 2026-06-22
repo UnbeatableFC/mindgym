@@ -2,12 +2,14 @@ import React from 'react';
 import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { usePreferencesStore } from '@/store/preferencesStore';
 import { useAuth } from '@clerk/clerk-expo';
+import { katas } from '@/data/katas';
 
 
 export default function HomeScreen() {
-  const { reset } = usePreferencesStore();
+  const { reset,categories } = usePreferencesStore();
   const { signOut } = useAuth();
 
+  // const selectedKata = katas.find((k) => categories.includes(k.category));
   const handleReset = async () => {
     await reset();
   };
@@ -24,6 +26,8 @@ export default function HomeScreen() {
     <ScrollView className="flex-1 p-4 bg-white">
       <Text className="text-2xl font-bold mb-4">Home</Text>
       {/* Existing home UI components go here */}
+
+      
 
       <TouchableOpacity
         onPress={handleReset}

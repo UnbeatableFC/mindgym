@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { images } from "@/constants/images";
 import {
   View,
@@ -43,10 +43,15 @@ export default function OnboardingScreen() {
   };
 
   // If already signed in and preferences exist, skip onboarding
+useEffect(() => {
+    if (isSignedIn && selected.length > 0) {
+      router.replace("/(tabs)/home");
+    }
+  }, [isSignedIn, selected, router]);
+
   if (isSignedIn && selected.length > 0) {
-    router.replace("/(tabs)/home");
-    return null;
-  }
+      return null
+    }
 
   return (
     <ScrollView className="flex-1 p-4 bg-white">

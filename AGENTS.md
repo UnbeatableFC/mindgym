@@ -60,37 +60,38 @@ Do not install or use new libraries without user approval.
 ## Architecture
 Use this folder structure:
 ```
-app/
-    (auth)/
-    (tabs)/
-components/
-constants/
-data/
-hooks/
-lib/
-store/
-types/
+src/
+    app/
+      (auth)/
+      (tabs)/
+    components/
+    constants/
+    data/
+    hooks/
+    lib/
+    store/
+    types/
 assets/
 ```
-## app/ 
+## src/app/ 
 This is for routes and screens only. Screens compose components and 
 call hooks or stores. They should not contain large reusable UI blocks 
 or business logic.
 
-## components/
+## src/components/
 This is for reusable UI. Create a component when it is 
 reused in multiple places, when it makes a screen easier to read, or 
 when it represents a clear UI concept. Examples for this app: 
 DailyKataCard, LeaderboardItem, GameMasterFeedback. Do not create components too early.
 
-## data/
+## src/data/
 This holds hardcoded content. Keep it typed.
 
-## store/ 
+## src/store/ 
 This holds Zustand stores. Examples of state to keep here: 
 completedKatas, currentStreak, userXP. Persist with AsyncStorage when needed.
 
-## lib/ 
+## src/lib/ 
 This holds external service helpers (clerk.ts, api.ts, cn.ts). 
 Never expose secret keys here.
 
